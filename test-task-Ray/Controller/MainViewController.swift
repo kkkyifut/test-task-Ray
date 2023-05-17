@@ -3,10 +3,9 @@ import UIKit
 class MainViewController: UIViewController, UITextFieldDelegate {
     private let storage = UserDefaults.standard
     private var enteredText: String?
-    private var savedImage: UIImage?
+    private var savedImage: ImageData?
     private var isLiked = false
-    private var savedImages: [UIImage] = []
-    private var savedResponse: [String] = []
+    private var savedImages: [ImageData]?
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var generatedImage: UIImageView!
@@ -26,8 +25,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     DispatchQueue.main.async { [self] in
                         indicator.stopAnimating()
                         if let image = UIImage(data: imageData) {
+                            let imageData = ImageData(queryText: text, image: image, isLiked: false)
                             generatedImage.image = image
-                            savedImage = image
+                            savedImage = imageData
                             checkLikeStatus()
                             likeImageButtonHidden()
                         }
@@ -51,36 +51,29 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         updateLikeButtonAppearance()
         likeImageButtonHidden()
         
-        if let image = savedImage, let text = enteredText {
+        if var imageData = savedImage {
             if isLiked {
-                if !savedImages.contains(image) && !savedResponse.contains(text) {
-                    savedImages.append(image)
-                    savedResponse.append(text)
-                    print("Save image")
+                if !savedImages!.contains(where: { $0.queryText == imageData.queryText || $0.image == imageData.image }) {
+                    imageData.isLiked = true
+                    savedImages!.append(imageData)
+                    print("Image saved")
                 } else {
                     print("Image already exists")
                 }
             } else {
-                if let index = savedImages.firstIndex(of: image), let indexText = savedResponse.firstIndex(of: text) {
-                    savedImages.remove(at: index)
-                    savedResponse.remove(at: indexText)
+                if let index = savedImages!.firstIndex(where: { $0.queryText == imageData.queryText || $0.image == imageData.image }) {
+                    imageData.isLiked = false
+                    savedImages!.remove(at: index)
                     print("Image removed")
                 }
             }
         }
-        let imageDataArray: [Data] = savedImages.map { image in
-            return image.pngData() ?? Data()
-        }
         
-        storage.set(imageDataArray, forKey: Storage.savedImages)
-        storage.set(savedResponse, forKey: Storage.savedResponses)
-        
-        print("savedImages in Main:", savedImages)
+        Storage.shared.saveImages(images: savedImages)
     }
     
     private func checkLikeStatus() {
-        if savedImage != nil && savedImages.contains(generatedImage.image!) {
-            print(11111)
+        if savedImages!.contains(where: { $0.queryText == enteredText || $0.image == savedImage?.image }) {
             isLiked = true
         } else {
             isLiked = false
@@ -97,6 +90,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         indicator.stopAnimating()
+        savedImages = Storage.shared.getImages()
         checkLikeStatus()
         likeImageButtonHidden()
     }
@@ -108,5 +102,4 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             likeButton.alpha = 1
         }
     }
-    
 }
