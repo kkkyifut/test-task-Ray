@@ -17,7 +17,27 @@
 		CCFDEF252A15169A00010011 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDEF242A15169A00010011 /* Storage.swift */; };
 		CCFDEF282A152B8D00010011 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDEF272A152B8D00010011 /* ImageData.swift */; };
 		CCFDEF2A2A152F9900010011 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDEF292A152F9900010011 /* ImagesListCell.swift */; };
+		CCFDEF352A155F9900010011 /* TestTaskRayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDEF342A155F9900010011 /* TestTaskRayUITests.swift */; };
+		CCFDEF372A155F9900010011 /* TestTaskRayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDEF362A155F9900010011 /* TestTaskRayUITestsLaunchTests.swift */; };
+		CCFDEF442A1567E800010011 /* TestTaskRayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFDEF432A1567E800010011 /* TestTaskRayTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCFDEF382A155F9900010011 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCFDEF012A14128600010011 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCFDEF082A14128600010011;
+			remoteInfo = "test-task-Ray";
+		};
+		CCFDEF452A1567E800010011 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCFDEF012A14128600010011 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCFDEF082A14128600010011;
+			remoteInfo = "test-task-Ray";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CCFDEF092A14128600010011 /* test-task-Ray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-task-Ray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +52,29 @@
 		CCFDEF242A15169A00010011 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		CCFDEF272A152B8D00010011 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		CCFDEF292A152F9900010011 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		CCFDEF322A155F9900010011 /* test-task-RayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "test-task-RayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCFDEF342A155F9900010011 /* TestTaskRayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskRayUITests.swift; sourceTree = "<group>"; };
+		CCFDEF362A155F9900010011 /* TestTaskRayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskRayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CCFDEF412A1567E800010011 /* test-task-RayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "test-task-RayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCFDEF432A1567E800010011 /* TestTaskRayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskRayTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CCFDEF062A14128600010011 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCFDEF2F2A155F9900010011 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCFDEF3E2A1567E800010011 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				CCFDEF0B2A14128600010011 /* test-task-Ray */,
+				CCFDEF332A155F9900010011 /* TestTaskRayUITests */,
+				CCFDEF422A1567E800010011 /* TestTaskRayTests */,
 				CCFDEF0A2A14128600010011 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				CCFDEF092A14128600010011 /* test-task-Ray.app */,
+				CCFDEF322A155F9900010011 /* test-task-RayUITests.xctest */,
+				CCFDEF412A1567E800010011 /* test-task-RayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +146,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		CCFDEF332A155F9900010011 /* TestTaskRayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCFDEF342A155F9900010011 /* TestTaskRayUITests.swift */,
+				CCFDEF362A155F9900010011 /* TestTaskRayUITestsLaunchTests.swift */,
+			);
+			path = TestTaskRayUITests;
+			sourceTree = "<group>";
+		};
+		CCFDEF422A1567E800010011 /* TestTaskRayTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCFDEF432A1567E800010011 /* TestTaskRayTests.swift */,
+			);
+			path = TestTaskRayTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +183,42 @@
 			productReference = CCFDEF092A14128600010011 /* test-task-Ray.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CCFDEF312A155F9900010011 /* test-task-RayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCFDEF3A2A155F9900010011 /* Build configuration list for PBXNativeTarget "test-task-RayUITests" */;
+			buildPhases = (
+				CCFDEF2E2A155F9900010011 /* Sources */,
+				CCFDEF2F2A155F9900010011 /* Frameworks */,
+				CCFDEF302A155F9900010011 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCFDEF392A155F9900010011 /* PBXTargetDependency */,
+			);
+			name = "test-task-RayUITests";
+			productName = "test-task-RayUITests";
+			productReference = CCFDEF322A155F9900010011 /* test-task-RayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CCFDEF402A1567E800010011 /* test-task-RayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCFDEF472A1567E800010011 /* Build configuration list for PBXNativeTarget "test-task-RayTests" */;
+			buildPhases = (
+				CCFDEF3D2A1567E800010011 /* Sources */,
+				CCFDEF3E2A1567E800010011 /* Frameworks */,
+				CCFDEF3F2A1567E800010011 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCFDEF462A1567E800010011 /* PBXTargetDependency */,
+			);
+			name = "test-task-RayTests";
+			productName = "test-task-RayTests";
+			productReference = CCFDEF412A1567E800010011 /* test-task-RayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -135,6 +231,14 @@
 				TargetAttributes = {
 					CCFDEF082A14128600010011 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					CCFDEF312A155F9900010011 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CCFDEF082A14128600010011;
+					};
+					CCFDEF402A1567E800010011 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CCFDEF082A14128600010011;
 					};
 				};
 			};
@@ -152,6 +256,8 @@
 			projectRoot = "";
 			targets = (
 				CCFDEF082A14128600010011 /* test-task-Ray */,
+				CCFDEF312A155F9900010011 /* test-task-RayUITests */,
+				CCFDEF402A1567E800010011 /* test-task-RayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -164,6 +270,20 @@
 				CCFDEF192A14128700010011 /* LaunchScreen.storyboard in Resources */,
 				CCFDEF162A14128700010011 /* Assets.xcassets in Resources */,
 				CCFDEF142A14128600010011 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCFDEF302A155F9900010011 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCFDEF3F2A1567E800010011 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +304,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCFDEF2E2A155F9900010011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCFDEF372A155F9900010011 /* TestTaskRayUITestsLaunchTests.swift in Sources */,
+				CCFDEF352A155F9900010011 /* TestTaskRayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCFDEF3D2A1567E800010011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCFDEF442A1567E800010011 /* TestTaskRayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCFDEF392A155F9900010011 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCFDEF082A14128600010011 /* test-task-Ray */;
+			targetProxy = CCFDEF382A155F9900010011 /* PBXContainerItemProxy */;
+		};
+		CCFDEF462A1567E800010011 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCFDEF082A14128600010011 /* test-task-Ray */;
+			targetProxy = CCFDEF452A1567E800010011 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CCFDEF122A14128600010011 /* Main.storyboard */ = {
@@ -384,6 +534,80 @@
 			};
 			name = Release;
 		};
+		CCFDEF3B2A155F9900010011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KPR58387Y9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyifut.test-task-RayUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "test-task-Ray";
+			};
+			name = Debug;
+		};
+		CCFDEF3C2A155F9900010011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KPR58387Y9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyifut.test-task-RayUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "test-task-Ray";
+			};
+			name = Release;
+		};
+		CCFDEF482A1567E800010011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KPR58387Y9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyifut.test-task-RayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test-task-Ray.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/test-task-Ray";
+			};
+			name = Debug;
+		};
+		CCFDEF492A1567E800010011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KPR58387Y9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyifut.test-task-RayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test-task-Ray.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/test-task-Ray";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -401,6 +625,24 @@
 			buildConfigurations = (
 				CCFDEF1E2A14128700010011 /* Debug */,
 				CCFDEF1F2A14128700010011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCFDEF3A2A155F9900010011 /* Build configuration list for PBXNativeTarget "test-task-RayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCFDEF3B2A155F9900010011 /* Debug */,
+				CCFDEF3C2A155F9900010011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCFDEF472A1567E800010011 /* Build configuration list for PBXNativeTarget "test-task-RayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCFDEF482A1567E800010011 /* Debug */,
+				CCFDEF492A1567E800010011 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

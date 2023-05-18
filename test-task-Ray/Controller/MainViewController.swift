@@ -2,10 +2,10 @@ import UIKit
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     private let storage = UserDefaults.standard
-    private var enteredText: String?
-    private var savedImage: ImageData?
-    private var isLiked = false
-    private var savedImages: [ImageData]?
+    var enteredText: String?
+    var savedImage: ImageData?
+    var isLiked = false
+    var savedImages: [ImageData]?
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var generatedImage: UIImageView!
@@ -51,7 +51,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         updateLikeButtonAppearance()
         likeImageButtonHidden()
         
-        if var imageData = savedImage {
+        if var imageData = savedImage, savedImages != nil {
             if isLiked {
                 if !savedImages!.contains(where: { $0.queryText == imageData.queryText || $0.image == imageData.image }) {
                     imageData.isLiked = true
@@ -73,6 +73,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func checkLikeStatus() {
+        guard savedImages != nil else { return }
         if savedImages!.contains(where: { $0.queryText == enteredText || $0.image == savedImage?.image }) {
             isLiked = true
         } else {
